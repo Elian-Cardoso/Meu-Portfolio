@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; 
+  padding: 0; 
+  background: #f5f5f5; 
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #005f73;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header a {
+  color: #94d2bd;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+main {
+  max-width: 90vw;      /* aumentado para deixar o container maior e responsivo */
+  width: 90vw;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #0a9396;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.projeto {
+  max-width: 700px;        /* largura confortável para leitura e visual */
+  margin: 1.5rem auto;     /* centralizado com espaço em cima e embaixo */
+  padding: 1rem;
+  background: #fff;        /* fundo branco limpo */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;      /* centraliza texto e imagem */
+}
+
+.projeto img {
+  width: 100%;             /* ocupa toda largura do container */
+  height: auto;            /* mantém proporção */
+  max-height: 350px;       /* limita altura pra não ficar gigante */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;     /* espaço abaixo da imagem */
+  display: inline-block;   /* evita que fique isolada no bloco */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+    width: 95vw;
+    max-width: 95vw;
+  }
+}
