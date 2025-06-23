@@ -1,10 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0; 
-  padding: 0; 
-  background: #f5f5f5; 
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden; /* evita scroll lateral em qualquer tela */
 }
 
 header {
@@ -21,12 +22,19 @@ header a {
 }
 
 main {
-  max-width: 90vw;      /* aumentado para deixar o container maior e responsivo */
+  max-width: 90vw;
   width: 90vw;
   margin: 2rem auto;
   background: white;
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* 🔧 Corrige quebras de linha no "Sobre mim" */
+section#sobre p {
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 h1, h2 {
@@ -38,24 +46,24 @@ section {
 }
 
 .projeto {
-  max-width: 700px;        /* largura confortável para leitura e visual */
-  margin: 1.5rem auto;     /* centralizado com espaço em cima e embaixo */
+  max-width: 700px;
+  margin: 1.5rem auto;
   padding: 1rem;
-  background: #fff;        /* fundo branco limpo */
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;      /* centraliza texto e imagem */
+  text-align: center;
 }
 
 .projeto img {
-  width: 100%;             /* ocupa toda largura do container */
-  height: auto;            /* mantém proporção */
-  max-height: 350px;       /* limita altura pra não ficar gigante */
+  width: 100%;
+  height: auto;
+  max-height: 350px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;     /* espaço abaixo da imagem */
-  display: inline-block;   /* evita que fique isolada no bloco */
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 footer {
@@ -68,10 +76,11 @@ footer {
 /* Ajustes para telas menores */
 @media (max-width: 600px) {
   main {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
-    width: 95vw;
-    max-width: 95vw;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .projeto {
@@ -82,8 +91,8 @@ footer {
   header {
     padding: 0.8rem;
     font-size: 1rem;
-    width: 100vw;              /* ✅ Adicionado para corrigir falha no mobile */
-    box-sizing: border-box;    /* ✅ Adicionado para evitar overflow */
+    width: 100vw;
+    box-sizing: border-box;
   }
 
   header a {
@@ -114,9 +123,5 @@ footer {
     padding: 0.4rem 0.6rem;
     font-size: 0.9rem;
     word-break: break-word;
-  }
-
-  body {
-    overflow-x: hidden; /* evita scroll lateral */
   }
 }
