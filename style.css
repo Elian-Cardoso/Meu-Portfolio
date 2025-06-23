@@ -65,6 +65,7 @@ footer {
   color: #777;
 }
 
+/* Ajustes para telas menores */
 @media (max-width: 600px) {
   main {
     margin: 1rem;
@@ -96,5 +97,25 @@ footer {
   footer {
     font-size: 0.8rem;
     padding: 0.8rem;
+  }
+
+  /* ✅ Correção do topo (menu quebrado) */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  body {
+    overflow-x: hidden; /* evita scroll lateral */
   }
 }
